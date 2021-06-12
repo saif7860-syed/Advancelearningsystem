@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<title>Registration Form</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Nunito:wght@300&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+		.registerbox{
+			width: 300px;
+			text-align: center;
+			border: 1px solid black;
+			padding: 20px;
+			border-radius: 5px 50px 5px 50px;
+			background-image: linear-gradient(165deg, #a9daca 0, #a5dbcf 3.33%, #a2dbd4 6.67%, #a0dbd9 10%, #9fdade 13.33%, #9fdae3 16.67%, #a0d9e7 20%, #a2d8eb 23.33%, #a6d7ee 26.67%, #aad6f0 30%, #aed5f2 33.33%, #b4d4f4 36.67%, #bad2f4 40%, #c0d0f4 43.33%, #c7cff3 46.67%, #cdcdf2 50%, #d3cbf0 53.33%, #d9caed 56.67%, #dfc8ea 60%, #e4c7e6 63.33%, #e9c6e2 66.67%, #edc5dd 70%, #f1c4d8 73.33%, #f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
+
+            box-shadow: 10px 20px 40px 20px #e4c7e6 ;
+;
+		}
+		.registerbox input{
+			background: transparent;
+			border-bottom: 2px;
+			width:100%;
+            
+		}
+		.registerbox input[type="text"],input[type="password"]
+{
+border:none;
+border-bottom:1px solid #fff;
+background:transparent;
+outline:none;
+color:#111;
+font-size:16px;
+}
+.registerbox button{
+    background: #c31432;
+    color: black;
+    padding: 10px;
+    border-radius: 30px 40px 30px 40px;
+}
+legend{
+      font-family:  'Nunito', sans-serif;
+      color: black;
+}
+.registerbox select{
+padding: 10px;
+border: 1px solid black;
+width: 200px;
+outline: none;
+background: transparent;
+border: none;
+border-bottom: 1px solid #fff;
+}
+h2{
+font-family:  'Nunito', sans-serif;
+}
+@media screen and(max-width: 400px){
+.registerbox{
+			width: 300px;
+			
+		}
+}
+.registerbox a{
+	text-decoration: none;
+	color: black;
+}
+.registerbox a:hover{
+	color: steelblue;
+}
+
+	</style>
+
+
+
+
+</head>
+<body>
+<center><h2>Sign-Up here</h2></center>
+<center>
+<div class="registerbox">
+	<form action="reg.php" method="post">
+		<fieldset>
+			<legend>Name</legend>
+			<input type="text" name="uname" placeholder="Enter your full name" required><br>
+		</fieldset>
+       <fieldset>
+       	<legend>Mobile Number</legend>
+       	<input type="text" name="mob" placeholder="Enter mobile number">
+       </fieldset>
+        <fieldset>
+        	<legend>Email</legend>
+        	<input type="text" name="email" placeholder="Enter email">
+        </fieldset>
+         <fieldset>
+        	<legend>Password</legend>
+        	<input type="Password" name="pass" placeholder="Enter Password">
+        </fieldset>
+        <fieldset>
+        	<legend>City</legend>
+        	<input type="text" name="city" placeholder="Enter city">
+        </fieldset>
+        <fieldset>
+        	<legend>State</legend>
+        	<input type="text" name="state" placeholder="Enter domicile state">
+        </fieldset>
+        <fieldset>
+        	<legend>Country</legend>
+        	<select name="country" placeholder="Enter Country">
+        		<option>India</option>
+        		<option>Pakistan</option>
+        		<option>USA</option>
+        	</select>
+        </fieldset>
+        <button type="submit" name="register">SUBMIT</button>
+	</form>
+	<p>Alredy have account?<span><a href="login.html">Login</a></span></p>
+</div>
+</center>
+</body>
+</html>
