@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advance learning system</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Nunito:wght@300&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Langar&family=Lobster&display=swap');
+body {
+  background-color: whitesmoke;
+  background-position: fixed;
+
+}
+h1 a{color: white;}
+h1 a:hover{text-decoration: none;color: black;}
+nav{font-family:'Nunito',sans-serif;font-size: 20px;background-color:purple;display:inline-flex;
+	width:100%;height: 100px;}
+ul li {list-style-type: none;display: inline-flex;margin-right: 20px;}
+ul li a{color: white;text-decoration: none;font-size: 20px;font-weight: 700;}
+ul li a:hover{color: black;text-decoration: none;}
+.checkbtn{font-size: 30px;color: black;float: right;cursor: pointer;display: none;}
+#check{display: none;}
+section{font-family:'Nunito', sans-serif ;font-size: 20px;}
+.container{font-family:'Nunito', sans-serif ;font-size: 20px;}
+.cont{font-family:'Nunito', sans-serif;font-size: 20px;}
+@media(max-width: 952px){
+	h1 a{font-size: 30px;}
+	ul li a{
+		font-size: 16px;
+	
+	}
+	section{
+		font-family:  'Nunito', sans-serif;
+	background:purple;
+	border-radius: 40px 40px 30px 30px;
+	color: white;
+	padding:20px;
+	opacity: 1.5;
+	border:2px solid black;
+	margin: 10px;
+	text-align: center;
+}
+.cont{
+	font-family:  'Nunito', sans-serif;
+	background:grey;color:white;margin: 20px;padding:20px;border:2px solid black;border-radius: 10px 40px 10px 40px;}
+	.container{
+		position: relative;
+		display: inline-flex;
+		margin: 20px;
+		
+	}
+
+}
+@media(max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	ul {
+		position: fixed;
+		width: 100%;
+		height: 80vh;
+	    background:mediumpurple;
+	    opacity: 0.9;
+		text-align: center;
+		top: 80px;
+		left: -100%;
+		transition: all 0.7s;
+	}
+	ul li {
+		display: block;
+	}
+	ul li a{
+		font-size: 30px;
+		color: white;
+	}
+   ul li a:hover{
+   	background: none;
+   	color:black;
+
+   }
+	#check:checked ~ul{
+		left: 0;
+	}
+	.card{
+		font-size: 15px;
+	}
+	h5{
+		font-size: 15px;
+		font-weight: 500;
+	}
+   section{
+   	font-family:'Nunito', sans-serif ;
+	font-size: 20px;
+	background:purple;
+	border-radius: 40px 40px 30px 30px;
+	color: white;
+	padding:20px;
+	opacity: 1.5;
+	border:2px solid black;
+	margin: 10px;
+	text-align: center;
+}
+.cont{
+	background:grey;color:white;margin: 20px;padding:20px;border:2px solid black;border-radius: 10px 40px 10px 40px;}
+	.container{
+		font-family:'Nunito', sans-serif ;
+	font-size: 20px;
+		position: relative;
+		display: inline-flex;
+		margin: 20px;
+		
+	}
+
+}
+span{
+	color: red;
+	font-size: 20px;
+}
+.row{
+	display: flex;
+}
+footer{
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	font-family:'Nunito', sans-serif ;
+	
+}
+section{
+	background:darkslateblue;
+	font-family:'Nunito', sans-serif ;
+	font-size: 20px;
+	border-radius: 40px 40px 30px 30px;
+	color: white;
+	padding:20px;
+	opacity: 1.5;
+	border:2px solid black;
+	margin: 10px;
+	text-align: center;
+}
+.cont{
+	background:midnightblue;color:white;margin: 20px;padding:20px;border:2px solid black;border-radius: 10px 40px 10px 40px;}
+	.container{
+		font-family:'Nunito', sans-serif ;
+	font-size: 20px;
+		position: relative;
+		display: inline-flex;
+		margin: 20px;
+		
+	}
+	.coont{
+		padding: 20px;
+		margin: 20px;
+		border-radius: 40px 30px 40px 30px;
+		background: black;
+		border: 2px solid grey;
+		}
+		.wrapper{
+			border: 1px solid black;
+			border-radius: 30px 40px 30px 40px;
+			background: cornflowerblue;
+  display: grid;
+  margin: 10px;
+  grid-gap: 20px;
+  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 700px) {
+  .wrapper{
+    margin: 200px auto;
+  }
+}
+.wrapper .box{
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+}
+.wrapper .box .front-face{
+  background: #fff;
+  height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .front-face .icon{
+  height: 80px;
+}
+.box .front-face .icon i{
+  font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span{
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i,
+.box .front-face span{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box .back-face{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .back-face p{
+  margin-top: 10px;
+  text-align: justify;
+}
+.box:hover .back-face{
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.box:hover .front-face{
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}
+
+</style>
+<script type="text/javascript">
+	function myfunction() {
+		alert("Please register first");
+	}
+</script>
+</head>
+<body>
+<nav>
+	<h1><a href="index.html" ><font color="red">A</font>dvance <font color="red">l</font>earning <font color="red">S</font>ystem</a></h1>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+    <i class="fas fa fa-bars fa-2x"></i></label>
+	<ul>
+		<li><a href="index.html"><i class="fa fa-home"></i><font color="red">H</font>ome</a></li>
+		<li><a href="aboutus.html"><i class="fa fa-info"></i><font color="red">A</font>bout us</a></li>
+		<li><a href="contact.html"><i class="fa fa-address-card"></i><font color="red">C</font>ontact us</a></li>
+			<li><a href="courses.html"><i class="fa fa-list" aria-hidden="true"></i><font color="red">C</font>ourses</a></li>
+				<li><a href="learn.html"><i class="fa fa-sticky-note" aria-hidden="true"></i><font color="red">L</font>earning <font color="red">P</font>ortal</a></li>
+		<li><a href="signup.html"><i class="fa fa-user-plus" aria-hidden="true"></i><font color="red">S</font>ignUp/<font color="red">L</font>ogin</a></li>
+	</ul>
+</nav>
+<section>
+	<h2><font color="red">A</font>n easy way to learn</h2>
+	<p>Hey all let's learn with us and enjoy a pleasure of learnng with us.This is a platfrom where on can get all the education and study material what they want to learn.</p>
+</section>
+<center><h2><font color="red">L</font>earn <font color="red">W</font>ith <font color="red">U</font>s</h2></center>
+<div class="cont">
+<div class="row">
+	<div class="col">
+		<h1><font color="red">W</font>anna <font color="red">L</font>earn <font color="red">W</font>ith <font color="red">U</font>s</h1>
+		<p>We provide immense deep knowlede of education.learn all these subjects with us and enjoy the pleasure of learning.</p>
+	</div>
+	<div class="col">
+		<img src="eng.jpg" width="300px"><br><br>
+		<a href="learn.html"><button class="btn btn-danger">Learn more</button></a>
+	</div><br><br><br>
+	<div class="col">
+		<img src="mat.jpg" width="300px" height="200px"><br><br>
+		<a href="learn.html"><button class="btn btn-danger">Learn more</button></a>
+	</div>
+</div>
+</div>
+<center><h2 style="font-family: sans-serif;"><font color="red">C</font>ourses <font color="red">W</font>e <font color="red">P</font>
+rovide</h2></center>
+<div class="coont">
+	<div class="card-deck">
+		<div class="card border-primary mb-3 bg-info" >
+		<div class="card-header h4"><i class="fa fa-battery-empty" aria-hidden="true" style="color:white"></i>Basic Tutorial</div>
+			<div class="card-body">
+				<div class="card-text">In basic tutorial all basic concepts will be cleared,user can easily clearify all the basic concepts</div>
+	</div>
+</div>
+<div class="card border-primary mb-3 bg-info">
+		<div class="card-header h4"><i class="fa fa-battery-half" aria-hidden="true" style="color:white"></i>Intermediate Tutorial</div>
+			<div class="card-body">
+				<div class="card-text">After Clearing all the basic concepts candidate can able to access the intermediatery course in which slight advance topics will be cleared</div>
+	</div>
+</div>
+<div class="card border-primary mb-3 bg-info">
+		<div class="card-header h4"><i class="fa fa-battery-full" aria-hidden="true" style="color:white"></i>Advance Tutorial</div>
+			<div class="card-body">
+				<div class="card-text">This tutorial will cover up all the advance topic,subject and study material,Candidate can choose this if he/she has completed all the other two tutorial</div>
+	</div>
+</div>
+
+	</div>
+</div>
+<center><h3><font color="red">W</font>hy <font color="red">U</font>s?</h3></center>
+  <div class="wrapper">
+      <div class="box">
+        <div class="front-face">
+          <div class="icon">
+<i class="fa fa-graduation-cap" ></i></div>
+<span>Best Teacher</span>
+        </div>
+<div class="back-face">
+          <span>Best Teachers </span>
+          <p>We have a best quality and well experienced teachers of more +3 to +5 years of experience.</p>
+</div>
+</div>
+<div class="box">
+        <div class="front-face">
+          <div class="icon">
+<i class="fa fa-pencil-square-o"></i></div>
+<span>Adaptive teaching</span>
+        </div>
+<div class="back-face">
+          <span>Adaptive teaching</span>
+          <p>Delivering customised learning based education to the student learning pace.</p>
+</div>
+</div>
+<div class="box">
+        <div class="front-face">
+          <div class="icon">
+<i class="fa fa-shield"></i></div>
+<span>Convinient & safe</span>
+        </div>
+<div class="back-face">
+          <span>Convinient & safe</span>
+          <p>No need to travel learn at the comfort and safety at your home.</p>
+</div>
+</div>
+</div>
+  </div><br>
+<footer>
+	<h3>
+		<font color="red">C</font>onnect <font color="red">W</font>ith <font color="red">U</font>s
+	</h3>
+	<div class="row">
+		<div class="col">
+			<h4><u>Quick links</u></h4>
+        <b><i class="fa fa-facebook"></i> <a href="">Facebook</a></b><br>
+        <b><i class="fa fa-instagram"></i><a href="">Instagram</a></b><br>
+        <b><i class="fa fa-youtube"></i><a href="">Youtube</a></b><br>
+        <b><i class="fa fa-whatsapp"></i><a href="">Whatsapp</a></b>
+		</div>
+		<div class="col">
+			<h4><u>Contact us</u></h4>
+			<label><i class="fa fa-user"></i>Name</label>
+			<input type="text" name="uname"><br>
+			<label><i class="fa fa-at"></i>Email</label>
+			<input type="text" name="email"><br><br>
+			<button class="btn btn-success">Send</button>
+		</div>
+		<div class="col">
+			<h4><u>Address</u></h4>
+			<i class="fa fa-address-card"></i><p>Near thana talaiya,budhwara,Bhopal(462001),(M.P)</p>
+		</div>
+	</div>
+	<center><p style="background: blue"><font color="white">&copy; Copyright
+2020 Advance learning coaching</font></p></center>
+</footer>
+</html>
