@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning</title>
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+
+ 	<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+ 		@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+		body{
+			background: 
+		}
+		
+		.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+.container .card{
+  position: relative;
+  width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+              inset -5px -5px 5px rgba(255,255,255,0.5),
+              inset 5px 5px 5px rgba(0,0,0,0.5),
+              inset -5px -5px 5px rgba(255,255,255,0.5);
+  border-radius: 15px;
+  margin: 30px;
+}
+.container .card .box{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #ebf5fc;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.container .card .box .content{
+  padding: 20px;
+  text-align: center;
+}
+.container .card .box .content h2{
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size:8em;
+  color: rgba(0,0,0,0,0.02);
+  transition: 0.5s; 
+}
+.container .card:hover .box .content h2{
+  color: rgba(0,0,0,0,0.05);
+}
+.container .card .box .content h3{
+  font-size: 1.8em;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+  font-family: 'Shadows Into Light', cursive;
+}
+.container .card .box .content p{
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+}
+.container .card .box .content a{
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+.container .card:hover .box .content a{
+  background: #ff568f;
+}
+.container .card:hover .box{
+transform: translateY(-50px);
+box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+background: linear-gradient(45deg,#b95ce4,#4f29cd)
+}
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p{
+  color:#fff;
+}
+.sidenav {
+  height: 100%;
+  width: 185px;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: purple;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+i{
+  color: white;
+}
+h4{
+	font-family: font-family: 'Nunito', sans-serif;
+            
+			color: purple;
+
+}
+footer{
+	background: black;
+	height: 300px;
+    color: white;
+}
+.cont{
+  margin: px;
+  padding: 20px;
+  width: px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cont .crd{
+  position: relative;
+  width: 320px;
+  height: 420px;
+  margin:15px;
+  overflow: hidden;
+}
+.cont .crd .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cont .crd .imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cont .crd .contet{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.cont .crd .contet div{
+  padding: 40px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  transform:translateY(50px); 
+}
+.cont .crd:hover .contet div{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.cont .crd span{
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.95;
+  background: #9c27b0;
+  transform: translate(-50%,-50%);
+  z-index:1;
+  transition: width 0.5s,height 0.5s;
+}
+.cont .crd:hover span{
+  width: 1000px;
+  height: 1000px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.main{
+	margin-left: 180px; /* Same as the width of the sidenav */
+   /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  display: flex;
+}
+.mn{
+  margin-left: 180px; /* Same as the width of the sidenav */
+   /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  }
+  header{
+  	background: black;
+  	color: white;
+  	padding:20px;
+    font-size: 30px;
+  }
+  input{
+  	border-radius: 20px;
+  	float: right;
+  	width: 200px;
+  }
+  a{
+  	color: white;
+  	text-decoration: none;
+  }
+  a:hover{
+   color:deepskyblue;
+   text-decoration: none;
+  }
+  
+  @media(max-width: 700px){
+  	header{
+  	background: black;
+  	color: white;
+  	padding:20px;
+    height: 200px;
+  	}
+  	input{
+  	border-radius: 20px;
+  	float: right;
+  	width: 200px;
+  }
+  i{
+  	margin:10px;
+  }
+
+  .row{
+	display: flex;
+}
+footer{
+      height: 500px;
+      color: white;
+}
+h1{
+font-family: 'Nunito', sans-serif;
+}
+h2{
+font-family: 'Nunito', sans-serif;
+}
+	</style>
+
+
+<body>
+  <header>
+  	<a href="index.html"><i class="fa fa-graduation-cap"></i><font color="red">W</font>elcome <font color="red">L</font>earning <font color="red">P</font>ortal</a>
+  
+  </header>
+        <center><h1><font color="red">H</font>ere <font color="red">a</font>re <font color="red">s</font>ome <font color="red">t</font>opics <font color="red">y</font>ou <font color="red">l</font>ike <font color="red">t</font>o <font color="red">l</font>earn</font></h1></center>  
+		     <div class="container">
+     	  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>Basic Mathematics</h3>
+        <p>Learn all the  basic fundamental of mathematic sfrom scratch</p>
+        <a href="Blearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+      </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Environment</h3>
+          <p>Learn things surrounding us in an easy way and understanding the phenomenon of the nature.</p>
+          <a href="env.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Colors</h3>
+          <p>Wanna imagine the nature of color how they look how they appear tuned with us to know more about the colors.</p>
+          <a href="Clearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Basic Science</h3>
+          <p>Learn all the fundamental basic of science and its branches.</p>
+          <a href="Slearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Learn Table</h3>
+          <p>Learn all the mathematics tables form the beginning and understand the multiplication property behind the mathematical table</p>
+          <a href="Tlearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Grammer</h3>
+          <p>First step of speaking english is grammar.Learn all the basic and expert grammer with us.</p>
+          <a href="Glearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>Basic English</h3>
+          <p>Learn all the fundamentals of english that are used in our daily routine.</p>
+          <a href="Elearn.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>History</h3>
+          <p>Wanna know about the old monuments and learn to know when and where what happens.</p>
+          <a href="his.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h3>General knowledge</h3>
+          <p>Learn who is first and who does this by learning all general knowledge with us</p>
+          <a href="gk.html"><button class="btn btn-danger" onclick="sign()">Learn More</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</center>
+<center><h2><font color="red">I</font>nteresting <font color="red">f</font>acts</font></h2></center>
+  <div class="cont">
+    <div class="crd">
+      <span style="top: 52px;left:0.5px;"></span>
+      <div class="imgBx"><img src="solar1.jpg" height="100px"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="orange">Solar system</font></h2>
+          <p><font color="yellow">Solar system consist of nine planets.The planets are-:the  Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune, dwarf planets such as Pluto.</font></p>
+        </div>
+      </div>
+    </div>
+     <div class="crd">
+      <span></span>
+      <div class="imgBx"><img src="earth1.jpg"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="blue">Earth</font></h2>
+          <p><font color="skyblue">Earth is the third planet in solar system.It's only the planet where life exist.</font></p>
+        </div>
+      </div>
+    </div>
+     <div class="crd">
+      <span></span>
+      <div class="imgBx"><img src="mount.jpg"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="black">Mountain</font></h2>
+          <p><font color="white">A mountain is a large landform that rises above the surrounding land in a limited area, usually in the form of a peak.</font></p>
+        </div>
+      </div>
+    </div>
+     <div class="crd">
+      <span></span>
+      <div class="imgBx"><img src="river1.jpg"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="skyblue">River</font></h2>
+          <p><font color="white">A river is a natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake or another river.</font></p>
+        </div>
+      </div>
+    </div>
+     <div class="crd">
+      <span></span>
+      <div class="imgBx"><img src="india.jpg"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="white">India</font></h2>
+          <p><font color="skyblue">India, officially the Republic of India, is a country in South Asia. It is the second-most populous country,the seventh-largest country by land area, and the most populous democracy in the world.</font></p>
+        </div>
+      </div>
+    </div>
+     <div class="crd">
+      <span></span>
+      <div class="imgBx"><img src="vatican.jpg"></div>
+      <div class="contet">
+        <div>
+          <h2><font color="yellow">Vatican city</font></h2>
+          <p><font color="">Vatican city is the smallest holiest country in the world.Vatican City, a city-state surrounded by Rome, Italy.</font></p>
+        </div>
+      </div>
+    </div>
+     
+  </div>
+</div>
+<div >
+  
+</div>
+<center><h2><font color="red">Q</font>uizes</h2></center>
+<div class="coont">
+       <div class="card-deck">
+              <div class="card border-primary mb-3 " style="background: mediumpurple;" >
+              <div class="card-header h4">Mathematics Quiz</div>
+                     <div class="card-body">
+                            <div class="card-text">
+                              After learninng the topics test yourself by performing the simple Quiz</div>
+                            <button class="btn btn-dark"><a href="Quiz.html">Learn</a></button>
+       </div>
+</div>
+<div class="card border-primary mb-3" style="background:peru;">
+              <div class="card-header h4">Grammer Quiz</div>
+                     <div class="card-body">
+                            <div class="card-text">After learninng the topics test yourself by performing the simple Quiz</div>
+                            <button class="btn btn-dark"><a href="Quiz.html">Learn</a></button>
+       </div>
+</div>
+<div class="card border-primary mb-3" style="background:deepskyblue;">
+              <div class="card-header h4">Gerneral Knownledge Quiz</div>
+                     <div class="card-body">
+                            <div class="card-text">After learninng the topics test yourself by performing the simple Quiz</div>
+                            <button class="btn btn-dark"><a href="Quiz.html">Learn</a></button>
+       </div>
+</div>
+
+       </div>
+<footer>
+	<h3>
+		<font color="red">C</font>onnect <font color="red">W</font>ith <font color="red">U</font>s
+	</h3>
+	<div class="row">
+		<div class="col">
+			<h4>Quick links</h4>
+        <b><i class="fa fa-facebook"></i> <a href="">Facebook</a></b><br>
+        <b><i class="fa fa-instagram"></i><a href="">Instagram</a></b><br>
+        <b><i class="fa fa-youtube"></i><a href="">Youtube</a></b><br>
+        <b><i class="fa fa-whatsapp"></i><a href="">Whatsapp</a></b>
+		</div>
+		<div class="col">
+			<h4>Contact us</h4>
+			<label><i class="fa fa-user"></i>Name</label>
+			<input type="text" name="uname"><br>
+			<label><i class="fa fa-at"></i>Email</label>
+			<input type="text" name="email"><br><br>
+			<button class="btn btn-success">Send</button>
+		</div>
+		<div class="col">
+			<h4>Address</h4>
+			<i class="fa fa-address-card"></i><p>Near thana talaiya,budhwara,Bhopal(462001),(M.P)</p>
+		</div>
+	</div>
+
+<p style="background: blue;"><font color="white">&copy; Copyright
+2020 Advance learning coaching</font></p>
+</footer>
+</body>
+</html>
