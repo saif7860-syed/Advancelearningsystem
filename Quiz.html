@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Information</title>
+	<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<style type="text/css">
+	.container{
+		border:2px solid black;
+		text-align:center;
+		width:400px;
+		background:linear-gradient(to right,#00F260, #0575E6, #26D0CE);
+	}
+</style>
+</head>
+<body>
+<center><h2>Please fill the folllowing details...</h2></center>
+	<div class="container"> 
+<form method="POST" action="Quiz.php">
+	<label>Full Name</label><br>
+	<input type="text" name="fname" required=""><br>
+	<label>Mobile Number</label><br>
+	<input type="text" name="mob" required=""><br>
+	<label>Date of birth</label><br>
+	<input type="date" name="dob" required=""><br>
+	<label>Class</label><br>
+	<input type="text" name="class" required=""><br><br>
+	<input type="submit" name="register" value="submit" class="btn btn-danger">
+</form>
+</div>
+</body>
+</html>

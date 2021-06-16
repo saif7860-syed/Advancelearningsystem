@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>
+Signin here
+</title>
+<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+body{
+margin:0px;
+padding:0px;
+
+background-size:cover;
+background-position:center;
+font-family:sans-serif;
+font-family:'Nunito',sans-serif;
+}
+fieldset{
+	text-align: center;
+	border: 1px solid midnightblue;
+	font-weight: bold;
+}
+.loginbox{
+	font-family:'Nunito',sans-serif;
+width:320px;
+height:400px;
+border-radius: 20px 30px 20px 30px;
+color:midnightblue;
+top:50%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+padding:70px 30px;
+border: 1px solid black;
+background: transparent;
+background-image: linear-gradient(165deg, #a9daca 0, #a5dbcf 3.33%, #a2dbd4 6.67%, #a0dbd9 10%, #9fdade 13.33%, #9fdae3 16.67%, #a0d9e7 20%, #a2d8eb 23.33%, #a6d7ee 26.67%, #aad6f0 30%, #aed5f2 33.33%, #b4d4f4 36.67%, #bad2f4 40%, #c0d0f4 43.33%, #c7cff3 46.67%, #cdcdf2 50%, #d3cbf0 53.33%, #d9caed 56.67%, #dfc8ea 60%, #e4c7e6 63.33%, #e9c6e2 66.67%, #edc5dd 70%, #f1c4d8 73.33%, #f3c3d3 76.67%, #f5c3ce 80%, #f6c3c9 83.33%, #f7c4c4 86.67%, #f7c4c0 90%, #f6c5bb 93.33%, #f4c6b7 96.67%, #f1c7b4 100%);
+ box-shadow: 10px 20px 40px 20px #e4c7e6 ;
+}
+h1{
+text-align:center;
+color:midnightblue;
+}
+.loginbox p{
+margin:0px;
+padding:0px;
+font-weight:bold;
+}
+.loginbox input{
+width:100%;
+margin-bottom:20px;
+}
+.loginbox input[type="text"],input[type="password"]
+{
+border:none;
+border-bottom:1px solid #111;
+background:transparent;
+outline:none;
+height:40px;
+color:#111;
+font-size:16px;
+}
+button
+{
+	width: 100px;
+background: #c31432;
+    color: black;
+    padding: 10px;
+    border-radius: 30px 40px 30px 40px;
+}
+
+.loginbox input[type="submit"]:hover
+{
+cursor:pointed;
+    color: black;
+    padding: 10px;
+    border-radius: 30px 40px 30px 40px;
+}
+.loginbox a{
+text-decoration:none;
+font-size:12px;
+line-height:20px;
+color:black;
+}
+.loginbox a:hover{
+color:white;
+}
+span{
+	font-size: 15px;
+}
+</style>
+<body >
+	<h1>Sign-in here</h1>
+<div class="loginbox">
+<form method="POST" action="login.php">
+	<p>Username</p>
+		<input type="text" name="uname" required>
+	
+		<p>Password</p>
+		<input type="Password" name="pass" required>
+	
+	<center><button type="submit" name="register">Login</button></center>
+</form>
+<p>Don't have account?<a href="signup.html">Sign-Up</a></p>
+</div>
+</body>
+</html>
